@@ -171,38 +171,43 @@
         "signature": "bbb87411988e93370461ac33c6437098c8cd39e9a7c92ea0d94b6a375dbe52cc",
         "affectsGlobalScope": true
       },
-      "../src/eventslist.ts": {
+      "../src/EventsList.ts": {
         "version": "573d7871e554678ef1a414e2433233a6f22aac15105f30ed69ce5fb327c4e094",
         "signature": "5dc6908464fb30830603e153ec9aa1b7294f148565ab4c2fa490a819b19718a7",
         "affectsGlobalScope": false
       },
-      "../src/message.ts": {
+      "../src/Message.ts": {
         "version": "43f05b6f4a511987fb1b2376f62599c48916f0efe24e636554390ecf0e551aa9",
         "signature": "dc1a74b95a00593015297a102330102db942f419a7415d05a7b1aa34d89ed42f",
         "affectsGlobalScope": false
       },
-      "../src/utils/buildcommand.ts": {
+      "../src/utils/BuildCommand.ts": {
         "version": "c559e1eb1b9c1c85a8cf986287112880786ccfb7f5859ce4e71c77feeca7f095",
         "signature": "9e2f68811f1a39b59f3eec3e5c68fec40e1b520448a8dd9bf178ea6ac1f16931",
         "affectsGlobalScope": false
       },
-      "../src/utils/buildnotification.ts": {
+      "../src/utils/BuildNotification.ts": {
         "version": "7f313721794e600867802d05e865a5de0fd8ed057064e2c9f9471552bbd93d98",
         "signature": "8b097b64c83db2b0e73c1bc7b819cb8413cd3ae5c0dbfe19b57bd276dc8adb97",
         "affectsGlobalScope": false
       },
-      "../src/utils/checkpermission.ts": {
+      "../src/utils/CheckPermission.ts": {
         "version": "dd04af021525f8836463566812cbdea9d4427e8da227197d5e1fd1a2a0f48f2d",
         "signature": "e79e5fe24f67e4d5cd05077d8acbc941fdb2d450d86911876849ef986b4e4d54",
         "affectsGlobalScope": false
       },
-      "../src/bot.ts": {
+      "../src/Bot.ts": {
         "version": "b42a0006001575378ec3064dee7289937712060b8205a6fcd01188fb26b29148",
         "signature": "028c273cd8e491c996dc061526971d33229a46b15198814b90400ed009b1172f",
         "affectsGlobalScope": false
       },
-      "../src/messagebuilder.ts": {
-        "version": "5ec453b01f895be23de97358731fc3717761c85783455cbce273e1acf3a6d20a",
+      "../src/utils/RemoveMentions.ts": {
+        "version": "5f1bb2afa9e39780c8baa402b86da666bcdc744099bcd65478bbf99983d0eae9",
+        "signature": "b9415f02b9b1d87e0ea7e2a1c64f9ed34abc2c5b672c33361a87fd25fe20e14a",
+        "affectsGlobalScope": false
+      },
+      "../src/MessageBuilder.ts": {
+        "version": "316e170adfe85b9d98af5a59745bab446630b93086ca6f4c699ac0947429cd44",
         "signature": "32eddec3f9018d852610c63b7d692af3953b25699d8b8c40320b7b844699bd76",
         "affectsGlobalScope": false
       },
@@ -656,25 +661,29 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/stream.d.ts"
       ],
-      "../src/bot.ts": [
+      "../src/Bot.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/eventslist.ts",
-        "../src/message.ts",
-        "../src/utils/buildcommand.ts",
-        "../src/utils/buildnotification.ts",
-        "../src/utils/checkpermission.ts"
+        "../src/EventsList.ts",
+        "../src/Message.ts",
+        "../src/utils/BuildCommand.ts",
+        "../src/utils/BuildNotification.ts",
+        "../src/utils/CheckPermission.ts"
+      ],
+      "../src/MessageBuilder.ts": [
+        "../src/Message.ts",
+        "../src/utils/RemoveMentions.ts"
       ],
       "../src/index.ts": [
-        "../src/bot.ts",
-        "../src/message.ts",
-        "../src/messagebuilder.ts"
+        "../src/Bot.ts",
+        "../src/Message.ts",
+        "../src/MessageBuilder.ts"
       ],
-      "../src/messagebuilder.ts": [
-        "../src/message.ts"
-      ],
-      "../src/utils/checkpermission.ts": [
+      "../src/utils/CheckPermission.ts": [
         "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/utils/RemoveMentions.ts": [
+        "../src/Message.ts"
       ]
     },
     "exportedModulesMap": {
@@ -848,21 +857,24 @@
       "../node_modules/discord.js/typings/index.d.ts": [
         "../node_modules/@discordjs/collection/dist/index.d.ts"
       ],
-      "../src/bot.ts": [
+      "../src/Bot.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/message.ts"
+        "../src/Message.ts"
+      ],
+      "../src/MessageBuilder.ts": [
+        "../src/Message.ts"
       ],
       "../src/index.ts": [
         "../src/bot.ts",
         "../src/message.ts",
         "../src/messagebuilder.ts"
       ],
-      "../src/messagebuilder.ts": [
-        "../src/message.ts"
-      ],
-      "../src/utils/checkpermission.ts": [
+      "../src/utils/CheckPermission.ts": [
         "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/utils/RemoveMentions.ts": [
+        "../src/Message.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -949,14 +961,15 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/bot.ts",
-      "../src/eventslist.ts",
+      "../src/Bot.ts",
+      "../src/EventsList.ts",
+      "../src/Message.ts",
+      "../src/MessageBuilder.ts",
       "../src/index.ts",
-      "../src/message.ts",
-      "../src/messagebuilder.ts",
-      "../src/utils/buildcommand.ts",
-      "../src/utils/buildnotification.ts",
-      "../src/utils/checkpermission.ts"
+      "../src/utils/BuildCommand.ts",
+      "../src/utils/BuildNotification.ts",
+      "../src/utils/CheckPermission.ts",
+      "../src/utils/RemoveMentions.ts"
     ]
   },
   "version": "4.1.3"

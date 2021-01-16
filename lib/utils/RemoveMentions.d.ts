@@ -1,0 +1,8 @@
+import Message from "../Message";
+/**
+ * Removes Dangerous pings such as @everyone and @here from the message.
+ *
+ * @param message The message object
+ * @see {Message}
+ */
+export default function removeMentions(message: Message): Message;
